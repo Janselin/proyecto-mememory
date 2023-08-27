@@ -119,6 +119,12 @@ body{
     text-align: center;
     margin-bottom: 2rem;
     color: var(--texts);
+    background: linear-gradient( 144deg, #8E43AD, #F2C511 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+  
 }
 
 
@@ -275,3 +281,8 @@ body{
     height: 50%;
     border-radius: 57%;
     border: 2px solid var(--black);}
+
+
+    .visible {
+        display: none;
+    }
