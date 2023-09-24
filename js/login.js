@@ -10,6 +10,7 @@ function registra(){
     form_registro.style.opacity="1"
     form_inicar_sesion.style.opacity="0";
 }
+
 registro.addEventListener("click",registra);
 
 function inicia(){
@@ -19,3 +20,4 @@ function inicia(){
     form_inicar_sesion.style.opacity="1";
 }
 inicar_sesion.addEventListener("click", inicia);
+

@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="public/favicon.ico" type="image/x-icon"/>
     <script src="https://kit.fontawesome.com/5314612aa6.js" crossorigin="anonymous"></script>
-   
-  
-        
-    
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css">    
+
+
+
     <!-- <link rel="stylesheet" href="css/title.css"> -->
     <!-- <script type="module" src="./js/index.js"></script> -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -19,7 +18,7 @@
     <title>Bienvenido a Mememory</title>
 </head>
 
-<body>
+<body >
     <!-- Contenedor General Iniciar sesión -->
     <div class="contenedor iniciar-sesion-form">
         <!-- Encabezado-->    
@@ -34,11 +33,22 @@
       
 
         <!-- Formulario -->
-        <div class="caja-form">
+        <div class="caja-form ">
 
 
              <div class="avatar__container">
-                <img src="public/avatar-bueno.jpg" alt="" class="avatar">
+
+                <img src="public/question.png" class="avatar" id="avatar-logo">
+
+
+
+                
+                <img src="public/avatar-bueno.jpg" class="novisible " alt="" id="avatar-user" >
+                <img src="public/avatar-forgot.png" class="novisible " alt="" id="avatar-forgot">
+                <img src="public/avatar-pass.jpg" class="novisible " alt="" id="avatar-pass" >
+                <!-- <img src="public/avatar-bueno.jpg" alt="" class="avatar visible" id="avatar" alt>
+                <img src="public/avatar-bueno.jpg" alt="" class="avatar visible" id="avatar" alt> -->
+
             </div>
            
             <form action="" class="formulario" id="sign_in_form">               
@@ -62,7 +72,7 @@
                 </div>
 
                 <!-- link de recuperacion de contraseña -->
-                <div class="recuperar-contraseña texto">
+                <div class="recuperar-contraseña texto" onmouseover="this">
                     <a class="link-contraseña" href="">¿Olvidaste tu contraseña?</a>
                 </div>
 
@@ -168,6 +178,7 @@
 
 
     <script src="js/login.js"></script>
+    <script src="js/avatars.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 

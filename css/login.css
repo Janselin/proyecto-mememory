@@ -273,16 +273,27 @@ body{
     display: flex;
     border-radius: 57%;
     justify-content: center;
+
 }
 
-.avatar {
-    
+.avatar__container img {
+
     width: 30%;
     height: 50%;
     border-radius: 57%;
-    border: 2px solid var(--black);}
+    border: 2px solid var(--black);
+}
 
+
+.novisible {
+        
+    display: none;
+
+}
 
     .visible {
-        display: none;
+      
+        display: block;
+
     }
+
