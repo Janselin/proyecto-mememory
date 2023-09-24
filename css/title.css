@@ -1,0 +1,26 @@
+h1 {
+	/* --minFontSize: 2rem;
+	--maxFontSize: calc(var(--minFontSize) * 8);
+	--scaler: 20vw;
+	font-family: "Moderat", sans-serif;
+	font-weight: 900;
+	font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize)); */
+
+	background: url('../public/bgmeme.jpg');
+	background-size: auto 200%;
+	-webkit-background-clip: text;
+   background-clip: text;
+   -webkit-background-clip: text;
+
+	-webkit-text-fill-color: transparent;
+	animation: mememory 5s linear infinite;
+
+}
+@keyframes mememory {
+   0% {
+      background-position: center 0;
+   }
+   100% {
+      background-position: center 200%;
+   }
+}
