@@ -52,7 +52,7 @@ a:hover {
 }
 
 body{
-    /* width: 27%; */
+    
     font-family: var(--fuente);
     background-color:var(--background);
     display: flex;
@@ -67,17 +67,13 @@ body{
 .contenedor{
     position: relative;
     /* margin: 0 auto; */
-    /* max-width: 1200px; */
+    max-width: 1200px;
     width: 95%;
     /* height: 100%; */
 }
 
 
-
-
-
-
- .formulario{
+.formulario{
     display: flex;
     gap: 3rem;
     width: 100%;
@@ -139,7 +135,7 @@ body{
 .input {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1rem;    
 }
 
 .texto input{
@@ -151,6 +147,7 @@ body{
    border-bottom: 1px solid white;
    outline-color: var(--outline);
    font-size: 1rem;
+   color: var(--white);
 }
 
 
@@ -205,51 +202,17 @@ body{
     cursor: pointer;
 }
 
-/* .texto .media {
-    font-size: 1.35rem;
-    text-align: center;
-} */
-
-
-/* .iconos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-} */
-
-/* .iconos a:hover{
-    background-color:var(--dark-blue);
-    color:var(--green);
-}
-.iconos a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px; 
-    background-color: var(--green);
-    color: var(--texts);
-    font-size: 2.5rem;
-    border-radius: 50%;
-    margin: 20px;
-} */
-
-/* .texto .link-registrar, .link-iniciar-sesion{
-    font-size: 1.35rem;
-    text-align: center;
-    margin-bottom: 30px;
-} */
 
 .registrar p a{
     
     text-decoration: none;
     font-weight: 600;
+    color: var(--button-bg);
 }
 
-/* .registrar p a:hover{
-    color: #071E3D;
-} */
+.registrar p a:hover{
+    color: rgb(236, 78, 78);
+}
 
 ::placeholder {
     color: var(--texts);    
@@ -297,3 +260,22 @@ body{
 
     }
 
+@media (min-width: 768px) { 
+
+.contenedor {
+    width: 80%;
+}
+
+
+}
+
+
+
+@media (min-width: 1024px) { 
+
+.contenedor {
+    width: 35%;
+}
+
+
+}
