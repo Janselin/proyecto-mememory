@@ -16,10 +16,13 @@ const boton_iniciar = document.querySelector(".login")
 
 
 
+
 inputMail.addEventListener('keyup', (e) => {
 
    change_img(avatar_logo,avatar_user);
    avatar_pass.style="display: none";
+   
+   
 })
 
 
@@ -34,8 +37,9 @@ inputPass.addEventListener('keyup', (e) => {
 
 function change_img(avatar,img) {
 
-      avatar.style="display: none";
+      avatar.style="display: none";     
       img.style="display:block";
+
    }
 
 
