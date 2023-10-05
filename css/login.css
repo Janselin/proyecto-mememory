@@ -66,8 +66,8 @@ body {
 
 }
 
-.circles li{
- 
+.circles div{
+  object-fit: cover;
   position: absolute;
   display: block;
   list-style: none;
@@ -79,19 +79,22 @@ body {
   
 }
 
-.circles li:nth-child(1){
+.circles div:nth-child(1){
+
+  background: url("/public/cards/1.jpg") no-repeat;
+  background-size: cover;
   left: 25%;
   width: 80px;
   height: 80px;
   animation-delay: 0s;
-  background-image: url("../public/cards/6.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  
+  
 }
 
 
-.circles li:nth-child(2){
-  
+.circles div:nth-child(2){
+  background: url("/public/cards/2.jpg") no-repeat;
+  background-size: cover;
   left: 10%;
   width: 20px;
   height: 20px;
@@ -100,9 +103,9 @@ body {
 
 }
 
-.circles li:nth-child(3){
-  /* background-image: url("../public/cards/2.jpg");
-  background-size: contain; */
+.circles div:nth-child(3){
+  background: url("/public/cards/3.webp") no-repeat;
+  background-size: cover;
   left: 70%;
   width: 20px;
   height: 20px;
@@ -110,10 +113,9 @@ body {
 
 }
 
-.circles li:nth-child(4){
-  background-image: url("../public/cards/2.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+.circles div:nth-child(4){
+  background: url("/public/cards/4.webp") no-repeat;
+  background-size: cover;
   left: 40%;
   width: 60px;
   height: 60px;
@@ -121,35 +123,36 @@ body {
   animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
-  
+.circles div:nth-child(5){
+  background: url("/public/cards/6.jpg") no-repeat;
+  background-size: cover;
   left: 65%;
   width: 20px;
   height: 20px;
   animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
-  background-image: url("../public/cards/4.webp");
+.circles div:nth-child(6){
+  background: url("/public/cards/7.jpg") no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   left: 75%;
   width: 110px;
   height: 110px;
   animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
-  background-image: url("../public/cards/6.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
+.circles div:nth-child(7){
+  background: url("/public/cards/happy.png") no-repeat;
+  background-size: cover;
   left: 35%;
   width: 150px;
   height: 150px;
   animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles div:nth-child(8){
+  background: url("/public/cards/1.jpg") no-repeat;
+  background-size: cover;
   left: 50%;
   width: 25px;
   height: 25px;
@@ -157,10 +160,8 @@ body {
   animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
-  /* background-image: url("../public/cards/1.avif");
-  background-size: contain;
-  background-repeat: no-repeat; */
+.circles div:nth-child(9){
+ 
   left: 20%;
   width: 15px;
   height: 15px;
@@ -168,10 +169,8 @@ body {
   animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
-  background-image: url("../public/cards/7.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+.circles div:nth-child(10){
+ 
   left: 85%;
   width: 150px;
   height: 150px;
@@ -348,9 +347,11 @@ body {
 
 
   .avatar {
-    width: 55%;
-    height: 55%;
-    border-radius: 50px;     
+    
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;     
+    border: 3px solid rgba(235, 225, 225, 0.355);
   }
 
 
