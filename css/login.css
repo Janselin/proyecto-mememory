@@ -81,7 +81,7 @@ body {
 
 .circles div:nth-child(1){
 
-  background: url("/public/cards/1.jpg") no-repeat;
+  background: url('../public/cards/1.jpg') no-repeat;
   background-size: cover;
   left: 25%;
   width: 80px;
@@ -93,7 +93,7 @@ body {
 
 
 .circles div:nth-child(2){
-  background: url("/public/cards/2.jpg") no-repeat;
+  background: url('../public/cards/2.jpg') no-repeat;
   background-size: cover;
   left: 10%;
   width: 20px;
@@ -104,7 +104,7 @@ body {
 }
 
 .circles div:nth-child(3){
-  background: url("/public/cards/3.webp") no-repeat;
+  background: url('../public/cards/3.webp') no-repeat;
   background-size: cover;
   left: 70%;
   width: 20px;
@@ -114,7 +114,7 @@ body {
 }
 
 .circles div:nth-child(4){
-  background: url("/public/cards/4.webp") no-repeat;
+  background: url('../public/cards/4.webp') no-repeat;
   background-size: cover;
   left: 40%;
   width: 60px;
@@ -124,7 +124,7 @@ body {
 }
 
 .circles div:nth-child(5){
-  background: url("/public/cards/6.jpg") no-repeat;
+  background: url('../public/cards/5.jpg') no-repeat;
   background-size: cover;
   left: 65%;
   width: 20px;
@@ -133,7 +133,7 @@ body {
 }
 
 .circles div:nth-child(6){
-  background: url("/public/cards/7.jpg") no-repeat;
+  background: url('../public/cards/6.png') no-repeat;
   background-size: cover;
   left: 75%;
   width: 110px;
@@ -142,7 +142,7 @@ body {
 }
 
 .circles div:nth-child(7){
-  background: url("/public/cards/happy.png") no-repeat;
+  background: url('../public/cards/7.jpg') no-repeat;
   background-size: cover;
   left: 35%;
   width: 150px;
@@ -151,7 +151,7 @@ body {
 }
 
 .circles div:nth-child(8){
-  background: url("/public/cards/1.jpg") no-repeat;
+  background: url('../public/cards/8.png') no-repeat;
   background-size: cover;
   left: 50%;
   width: 25px;
@@ -267,8 +267,7 @@ body {
 .texto input {
   width: 100%;
   padding: 10px 16px;
-  background-color: hsl(248deg 36% 43% / 35%);
- 
+  background-color: hsl(248deg 36% 43% / 35%); 
   border: none;
   border-bottom: 1px solid white;
   outline-color: var(--outline);
@@ -344,7 +343,9 @@ body {
   justify-content: center;
   
 }
-
+.avatar__container img:nth-child(1){
+  border: none;
+}
 
   .avatar {
     
