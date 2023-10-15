@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de memoria</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Juego de Me-Memoria</title>
+    <link rel="shortcut icon" href="./img/question.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <!-- <link rel="stylesheet" href= "animacion.css"> -->
+    
 </head>
 <body>
     <main>
         <section class="section1">
-            <h1>Juego de memoria</h1>
+            <h1>Juego de Me-MEmoria</h1>
             <table>
                 <tr>
-                    <td><button id="0"></button></td>
-                    <td><button id ="1"></button></td>
-                    <td><button id ="2"></button></td>
-                    <td><button id ="3"></button></td>
+                    <td><button id="0" class = "cartas"></button></td>
+                    <td><button id ="1" class = "cartas"></button></td>
+                    <td><button id ="2" class = "cartas"></button></td>
+                    <td><button id ="3" class = "cartas"></button></td>
                 </tr>
 
                  <tr>
-                    <td><button id ="4"></button></td>
-                    <td><button id ="5"></button></td>
-                    <td><button id ="6"></button></td>
-                    <td><button id ="7"></button></td>
+                    <td><button id ="4" class = "cartas"></button></td>
+                    <td><button id ="5" class = "cartas"></button></td>
+                    <td><button id ="6" class = "cartas"></button></td>
+                    <td><button id ="7" class = "cartas"></button></td>
                 </tr>
 
                  <tr>
-                    <td><button id ="8"></button></td>
-                    <td><button id ="9"></button></td>
-                    <td><button id ="10" ></button></td>
-                    <td><button id ="11" ></button></td>
+                    <td><button id ="8" class = "cartas"></button></td>
+                    <td><button id ="9" class = "cartas"></button></td>
+                    <td><button id ="10" class = "cartas" ></button></td>
+                    <td><button id ="11" class = "cartas" ></button></td>
                 </tr>
 
                  <tr>
-                    <td><button id ="12" ></button></td>
-                    <td><button id ="13" ></button></td>
-                    <td><button id ="14" ></button></td>
-                    <td><button id ="15" ></button></td>
+                    <td><button id ="12" class = "cartas" ></button></td>
+                    <td><button id ="13" class = "cartas" ></button></td>
+                    <td><button id ="14" class = "cartas" ></button></td>
+                    <td><button id ="15" class = "cartas" ></button></td>
                 </tr>
             </table>
         </section>
@@ -44,9 +47,12 @@
             <div id="aciertos" class="estadisticas">Aciertos: 0</div>
             <div id="tiempo" class="estadisticas">Tiempo: 30 segundos</div>
             <div id="movimientos" class="estadisticas">Movimientos: 0</div>
+            <div class="empezar" id="empezar">Empezar</div>
         </section>
     </main>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
