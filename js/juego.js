@@ -72,35 +72,6 @@ function bloquerTarjetas() {
     }
 }
 
-//Mensaje cuando ganas
-function ganaste() {
-    Swal.fire({
-        icon: "success",
-        title: "¡Ganaste!",
-        text: `Genial 🎊 solo demoraste ${timerInicial - timer} segundos`,
-        confirmButtonText: "OK",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            if (result.isConfirmed) {
-                location.reload();
-            }
-        }
-    });
-}
-
-//Mensaje cuando pierdes
-function perdiste() {
-    Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Se te acabó el tiempo 😿',
-            }).then((resultado) => {
-                if (resultado.isConfirmed) {
-                    location.reload();
-                }
-            });
-}
-
 //Logica del juego 
 function destapar(id) {
     if (temporizador === false) {
@@ -151,4 +122,40 @@ function destapar(id) {
     }
 }
 
-export { iniciarJuego, desbloquear, buttons, destapar, empezar, cartas };
+//Mensaje cuando ganas
+function ganaste() {
+    Swal.fire({
+        icon: "success",
+        title: "¡Ganaste!",
+        text: `Genial 🎊 solo demoraste ${timerInicial - timer} segundos`,
+        confirmButtonText: "OK",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            if (result.isConfirmed) {
+                location.reload();
+            }
+        }
+    });
+}
+
+//Mensaje cuando pierdes
+function perdiste() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Se te acabó el tiempo 😿',
+    }).then((resultado) => {
+        if (resultado.isConfirmed) {
+            location.reload();
+        }
+    });
+}
+
+export {
+    iniciarJuego,
+    desbloquear,
+    buttons,
+    destapar,
+    empezar,
+    cartas
+};
