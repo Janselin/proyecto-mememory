@@ -1,7 +1,10 @@
 const cacheName = "mi-cache";
 const cacheFiles = [
    'offline.html',
-   'public/cards'
+   'public/cards',
+   'public/offline.jpg',
+   'css/offline.css',
+   'css/login.css'
 ]
 
 // GUARDAR EN CACHE  Y BUSCAR EN CACHE -
