@@ -32,7 +32,7 @@ numeros = numeros.sort(() => Math.random() - 0.5);
 
 //Funciones
 
-//Iniciar Jugo desabilitando(bloquear) las cartas
+//Iniciar Jugo deshabilitando(bloquear) las cartas
 function iniciarJuego() {
     for (let i = 0; i < cartas.length; i++) {
         cartas[i].disabled = true;
@@ -80,7 +80,6 @@ function destapar(id) {
     }
 
     tarjetasDestapas++;
-    console.log(tarjetasDestapas);
 
     if (tarjetasDestapas === 1) {
         tarjeta1 = document.getElementById(id);
@@ -104,7 +103,7 @@ function destapar(id) {
             if (aciertos == 8) {
                 clearInterval(tiempoRegresivoId);
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 😲`;
-                mostrarTiempo.innerHTML = `Genial 🎊 solo demoraste ${timerInicial - timer} segundos`;
+                mostrarTiempo.innerHTML = `Eres excelente 🎊 solo demoraste ${timerInicial - timer} segundos`;
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 😎🤘`;
                 ganarAudio.play();
                 ganaste();
@@ -126,12 +125,12 @@ function destapar(id) {
 function ganaste() {
     Swal.fire({
         icon: "success",
-        title: "¡Ganaste!",
-        text: `Genial 🎊 solo demoraste ${timerInicial - timer} segundos`,
+        title: "✨¡Ganaste!✨",
+        text: `Eres excelente 😎 tú tiempo fue de ${timerInicial - timer} segundos`,
         confirmButtonText: "OK",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            if (result.isConfirmed) {
+    }).then((resultado) => {
+        if (resultado.isConfirmed) {
+            if (resultado.isConfirmed) {
                 location.reload();
             }
         }
@@ -142,8 +141,8 @@ function ganaste() {
 function perdiste() {
     Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'Se te acabó el tiempo 😿',
+        title: 'Que mal 😕',
+        text: 'Se te acabó el tiempo ⏰. Intentalo de nuevo✌️',
     }).then((resultado) => {
         if (resultado.isConfirmed) {
             location.reload();
