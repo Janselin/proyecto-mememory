@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5314612aa6.js" crossorigin="anonymous"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <link rel="icon" type="image/png" sizes="196x196" href="public/icons/favicon-196.png">
+    <link rel="apple-touch-icon" href="public/icons/apple-icon-180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="public/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <title>Bienvenido a Me-Memoria</title>
+  </head>
+  <body>
+    <div class="circles">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Contenedor General Iniciar sesión -->
+    <div class="contenedor iniciar-sesion-form">
+
+      <!-- Encabezado-->
+      <header class="header">
+
+        <!-- Encabezado-->
+        <h1 class="encabezado">Me-Memoria</h1>
+      </header>
+
+      <!-- Formulario -->
+      <div class="caja-form ">
+        <div class="avatar__container">
+          <img src="public/question.png" class="avatar animate__animated animate__bounce" id="avatar-logo" alt="">
+          <img src="public/avatar-bueno.png" class="novisible avatar animate__animated animate__fadeIn " alt="" id="avatar-user">
+          <img src="public/avatar-forgot.png" class="novisible avatar animate__animated animate__fadeIn" alt="" id="avatar-forgot">
+          <img src="public/avatar-pass.png" class="novisible avatar animate__animated animate__fadeIn" alt="" id="avatar-pass">
+        </div>
+        <form action="" class="formulario" id="sign_in_form">
+
+          <!-- input-usuario -->
+          <div class="input-usuario texto input">
+            <label for="usuario">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <style>
+                  svg {
+                    fill: #ffffff
+                  }
+                </style>
+                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+              </svg>
+            </label>
+            <input type="email" name="" id="usuario" placeholder="Ingresa tu email" required="">
+          </div>
+
+          <!-- input-contraseña -->
+          <div class="input-contraseña texto input">
+            <label for="contraseña">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                <style>
+                  svg {
+                    fill: #ffffff
+                  }
+                </style>
+                <path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"></path>
+              </svg>
+            </label>
+            <input type="password" name="" id="contraseña" placeholder="Ingresa contraseña" required="">
+          </div>
+
+          <!-- link de recuperacion de contraseña -->
+          <div class="recuperar-contraseña texto">
+            <a class="link-contraseña" href="">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <!--botón de login -->
+          <div class="input-login">
+            <input class="login" type="submit" value="Iniciar Sesión">
+          </div>
+        </form>
+
+        <!--link de registro -->
+        <div class="registrar texto">
+          <p class="link-registrar">¿No tienes cuenta? <a href="#">Registrate</a> </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario de Registro -->
+
+    <!-- Contenedor General Registro -->
+    <div class="contenedor registro-form">
+
+      <!-- Imagen -->
+      <div class="imagen-formulario"></div>
+
+      <!-- Formulario -->
+      <div class="caja-form ">
+        <form action="" class="formulario" id="sign_up_form">
+          <div class="texto">
+
+            <!-- encabezado-->
+            <h2 class="encabezado">Crear cuenta</h2>
+          </div>
+          <div class="input-nombre texto">
+
+            <!-- input-nombre -->
+            <label for="nombre"></label>
+            <input type="text" name="" id="nombre" placeholder="Nombre" required="">
+          </div>
+
+          <!-- input-usuario -->
+          <div class="input-usuario texto">
+            <label for="usuario"></label>
+            <input type="email" name="" id="usuario-registro" placeholder="Email" required="">
+          </div>
+
+          <!-- input-contraseña -->
+          <div class="input-contraseña texto">
+            <label for="contraseña"></label>
+            <input type="password" name="" id="contraseña-registro" placeholder="Contraseña" required="">
+          </div>
+
+          <!-- input-confirmar-contraseña -->
+          <div class="input-confirmar-contraseña texto">
+            <label for="confirmar-contraseña"></label>
+            <input type="password" name="" id="confirmar-contraseña" placeholder="Confirmar contraseña" required="">
+          </div>
+
+          <!--botón de Crear cuenta -->
+          <div class="input-login">
+            <input type="submit" value="Crear cuenta">
+          </div>
+        </form>
+
+        <!--link de registro -->
+        <div class="registrar texto">
+          <p class="link-iniciar-sesion">¿Ya eres usuario? <a href="#">Inicia sesión</a> </p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p class="texto">Creado por Mary F. Katherine A. Sebastian G.</p>
+    </footer>
+    <script src="./js/login.js"></script>
+    <script src="./js/avatars.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
