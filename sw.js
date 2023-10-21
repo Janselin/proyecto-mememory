@@ -1,15 +1,14 @@
 const cacheName = "mi-cache";
+
 const cacheFiles = [
-   'offline.html',
-   'public/cards',
-   'public/offline.jpg',
-   'css/offline.css',
-   'css/login.css'
-]
+   
+   './offline.html',
+   './css/offline.css',  
+   './public/offline.jpg'
+  
+];
 
 // GUARDAR EN CACHE  Y BUSCAR EN CACHE -
-
-
 // se ejecutará una vez se haya instalado
 
 self.addEventListener('install', event => {   
@@ -20,10 +19,10 @@ event.waitUntil(
 // guarda en cache el archivo de offline
    caches.open(cacheName).then(cache=>{
       cache.addAll(cacheFiles)
+      console.log('cacheando')
    })
 );
 });
-
 
 // registra todas las peticiones hacia el servidor
 self.addEventListener('fetch', event => {
@@ -36,8 +35,7 @@ event.waitUntil(
    })
 )
 
-})
-
+});
 
 
 self.addEventListener('fetch', event => {
@@ -58,4 +56,4 @@ event.respondWith(
       }
    })
 
-) })
+) });
