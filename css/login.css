@@ -18,25 +18,14 @@
     --titles: hsl(0,0%,100%);
     --white: hsl(0,0%,100%);
     --black: #0000;
-
-
-    --background:  hsl(248, 36%, 43%);
-    
+    --background:  hsl(248, 36%, 43%);    
     --button-bg:hsl(0, 100%, 74%);
     --button-hover: hsl(248, 15%, 47%);
-    --outline:  hsl(0,0%,100%);
-    
+    --outline:  hsl(0,0%,100%);    
     --border-bottom: hsl(248, 69%, 36%);
-    --shadows: 
-    --borders: 
- 
-
     font-size: 16px;
     --fuente: 'Poppins', sans-serif;
 }
-
-
-
 
 
 * {
