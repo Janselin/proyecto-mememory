@@ -240,7 +240,7 @@ body {
 
 .encabezado {
  
-  font-size: 3.5rem;
+  
   font-weight: 900;
   text-align: center;
   margin-bottom: 2rem;
@@ -366,10 +366,15 @@ body {
   .contenedor {
     width: 80%;
   }
+
+  .encabezado{
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .contenedor {
     width: 35%;
   }
+ 
 }
