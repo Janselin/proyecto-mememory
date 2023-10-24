@@ -23,6 +23,8 @@ if (signUpForm){
 
             showMessage('Bienvenido' + userCredentials.user.email);
 
+            window.location.href = "/proyecto-mememory/";
+
         } catch (error) {
             // Manejar el error de registro aquí
 
