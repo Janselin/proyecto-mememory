@@ -1,4 +1,4 @@
-//Cambiar de Iniciar sesón a Resgistro
+//Cambiar de Iniciar sesón a Registro
 const registro = document.querySelector(".link-registrar");
 const inicar_sesion = document.querySelector(".link-iniciar-sesion");
 const form_registro = document.querySelector(".registro-form");

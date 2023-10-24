@@ -1,5 +1,5 @@
-import { onAuthStateChanged } from "firebase/auth";
-import { getDocs, collection } from "firebase/firestore"
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { getDocs, collection } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"
 
 import { auth, db } from './js/app/firebase.js';
 /* import { loginCheck  } from "./js/app/logincheck.js"; */
