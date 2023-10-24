@@ -26,12 +26,12 @@ event.waitUntil(
 
 // registra todas las peticiones hacia el servidor
 self.addEventListener('fetch', event => {
-   console.log(event);
+   /* console.log(event); */
 
 // busca si x archivo está en el cache
 event.waitUntil(
    caches.match(event.request).then(cacheRes=>{
-      console.log(cacheRes)     
+      /* console.log(cacheRes) */     
    })
 )
 
@@ -39,7 +39,7 @@ event.waitUntil(
 
 
 self.addEventListener('fetch', event => {
-   console.log(event);
+   /* console.log(event); */
 
 // busca si x archivo está en el cache
 event.respondWith(
