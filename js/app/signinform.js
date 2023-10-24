@@ -17,7 +17,7 @@ if (signInForm){
             console.log('Credenciales:', credentials);
 
             console.log('Si llegué hasta el try')
-            window.location.href = "../juego.html";
+            window.location.href = "/proyecto-mememory/juego.html";
         } catch (error) {
             if (error.code === "auth/wrong-password") {
                 alert('El error es:', error.message)
