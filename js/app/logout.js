@@ -10,7 +10,7 @@ if (logout){
     logout.addEventListener('click', async() => {
         await signOut(auth);
         showMessage('Has cerrado sesión');
-        window.location.href = "/index.html";
+        window.location.href = "/proyecto-mememory";
     });
 
 }
