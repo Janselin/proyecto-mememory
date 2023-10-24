@@ -6,12 +6,12 @@ import { auth, db } from './js/app/firebase.js';
 
 /* import { setupScores } from "./js/app/score.js"; */
 
-/* import './js/app/signupform.js'; */
-/* import './js/app/logout.js'; */
+import './js/app/signupform.js';
+import './js/app/logout.js';
 /* import './js/app/logincheck.js'; */
-/* import './js/app/signinform.js';
+import './js/app/signinform.js';
 import './js/app/googlelogin.js';
-import './js/app/githublogin.js'; */
+import './js/app/githublogin.js';
 /*import './app/score.js'; */
 
 
