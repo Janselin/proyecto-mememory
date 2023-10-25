@@ -30,6 +30,7 @@ inputPass.addEventListener('keyup', (e) => {
    change_img(avatar_logo,avatar_pass);
    avatar_user.style="display: none";
    avatar_error.style="display: none";
+   avatar_happy.style="display: none";   
 
    
 });
