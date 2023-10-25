@@ -33,6 +33,7 @@ inputPass.addEventListener('focusout', (e) => {
 
    change_img(avatar_pass,avatar_happy);
    avatar_user.style="display: none";
+   avatar_logo.style="display: none";
    
 });
 
