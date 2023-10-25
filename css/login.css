@@ -158,25 +158,6 @@ body {
   animation-duration: 45s;
 }
 
-/* .circles div:nth-child(9){
- 
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles div:nth-child(10){
- 
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-} */
-
-
 
 @keyframes animate {
 
@@ -240,7 +221,7 @@ body {
 
 .encabezado {
  
-  
+  font-size: 3rem;
   font-weight: 900;
   text-align: center;
   margin-bottom: 2rem;
@@ -306,6 +287,13 @@ body {
   color: var(--texts);
   cursor: pointer;
   }
+}
+
+
+.social__contenedor {
+  
+  display: flex;
+  justify-content: center;
 }
 
 .registrar p a {
