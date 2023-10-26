@@ -13,8 +13,12 @@ if (gitHubButton){
 
         try {
             const credentials = await signInWithPopup(auth, provider);
+            
             console.log(credentials);
             showMessage('Bienvenido usuario de Github ' + credentials.user.displayName, 'success');
+
+
+            window.location.href = "proyecto-mememory/juego.html";
         } catch (error) {
             console.log(error);
         }

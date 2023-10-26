@@ -15,6 +15,7 @@ if (googleButton){
             const credentials = await signInWithPopup(auth, provider);
             console.log(credentials);
             showMessage('Bienvenido usuario de Google ' + credentials.user.displayName, 'success');
+            window.location.href = "/proyecto-mememory/juego.html";
         } catch (error) {
             console.log(error);
         }
