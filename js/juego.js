@@ -67,7 +67,7 @@ function contarTiempo() {
 function bloquerTarjetas() {
     for (let i = 0; i <= 15; i++) {
         let tarjetaBloqueada = document.getElementById(i);
-        tarjetaBloqueada.innerHTML = `<img loading="lazy" src="./img/${numeros[i]}.webp" alt="">`;
+        tarjetaBloqueada.innerHTML = `<img loading="lazy" src="./public/img/${numeros[i]}.webp" alt="">`;
         tarjetaBloqueada.disabled = true;
     }
 }
@@ -84,13 +84,13 @@ function destapar(id) {
     if (tarjetasDestapas === 1) {
         tarjeta1 = document.getElementById(id);
         primerResultado = numeros[id];
-        tarjeta1.innerHTML = `<img loading="lazy" src="./img/${primerResultado}.webp" alt="">`;
+        tarjeta1.innerHTML = `<img loading="lazy" src="./public/img/${primerResultado}.webp" alt="">`;
         clickAudio.play();
         tarjeta1.disabled = true;
     } else if (tarjetasDestapas === 2) {
         tarjeta2 = document.getElementById(id);
         segundoResultado = numeros[id];
-        tarjeta2.innerHTML = `<img loading="lazy" src="./img/${segundoResultado}.webp" alt="">`;
+        tarjeta2.innerHTML = `<img loading="lazy" src="./public/img/${segundoResultado}.webp" alt="">`;
         tarjeta2.disabled = true;
         movimientos++;
         mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
