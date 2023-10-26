@@ -4,6 +4,7 @@ const cacheFiles = [
    
    './offline.html',
    './css/offline.css',  
+   './css/login.css',  
    './public/offline.jpg',
    './img/1.webp',
    './img/2.webp',
