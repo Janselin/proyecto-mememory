@@ -7,8 +7,7 @@ const signInForm = document.querySelector('#sign_in_form');
 if (signInForm){
 
     signInForm.addEventListener('submit', async e => {
-        e.preventDefault();
-        console.log('Click en submit')
+        e.preventDefault();        
 
         const email = signInForm['usuario'].value;
         const password = signInForm['contraseña'].value;
@@ -17,13 +16,15 @@ if (signInForm){
             const credentials = await signInWithEmailAndPassword(auth, email, password);
             console.log('Credenciales:', credentials);
 
-            console.log('Si llegué hasta el try')
+            avatar_logo.style="display: block";
+
+
+            
             window.location.href = "/proyecto-mememory/juego.html";
         } catch (error) {
             if (error.code === "auth/wrong-password") {
                 alert('El error es:', error.message)
-                // avatar_happy.style="display: none";
-                    
+                                
                 
             }else if(error){
                 alert(error)  
