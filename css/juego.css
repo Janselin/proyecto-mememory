@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -20,7 +21,6 @@ main {
 
 .game_field {
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 0 10px 10px 10px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -37,11 +37,27 @@ main {
     align-items: center;
 }
 
-.game_field table tr td button:disabled{
+.game_field{
+
+}
+
+.game_field > div{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.game_field button{
+    border: 1px solid #efefef;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.game_field button:disabled{
     background-color: transparent;
 }
 
-.game_field table tr td button img{
+.game_field button img{
     object-fit: contain;
     width: auto;
     height: 4rem;
@@ -77,7 +93,8 @@ button:hover {
     border-radius: 50px;
     background-image: linear-gradient(135deg, #feb692 0%, #7101e1 100%);
     -webkit-box-shadow: 0 20px 30px -6px rgba(109, 8, 196, 0.5);
-            box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);     
+            box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+    padding: 0.5rem 2rem;
     
 
     }
@@ -123,9 +140,18 @@ img {
 }
 
 .modal-active{
-    background-color: white;
+    width: 100% !important;
+    position: absolute !important;
 }
 
-.modal-active #tiempo{
+.modal-active #tiempo, .modal-active #empezar{
     display: none;
 }
+
+.modal-active #start_again{
+    display: block;
+    width: max-content;
+    font-size: 1rem;
+}
+
+.game_field table tbody tr td

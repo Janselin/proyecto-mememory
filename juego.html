@@ -59,35 +59,35 @@
     <main class="w-11/12 m-auto flex-col sm:flex-row gap-4 sm:gap-0">
         <section class="game_field all-initial">
             <h1 class="hidden md:block">Juego de Me-Memoria</h1>
-            <table>
-                <tr>
-                    <td><button name="carta 0" aria-label="carta 0" id="0" class="cartas"></button></td>
-                    <td><button name="carta 1" aria-label="carta 1" id="1" class="cartas"></button></td>
-                    <td><button name="carta 2" aria-label="carta 2" id="2" class="cartas"></button></td>
-                    <td><button name="carta 3" aria-label="carta 3" id="3" class="cartas"></button></td>
-                </tr>
+            <div class="grid">
+                
+                    <button name="carta 0" aria-label="carta 0" id="0" class="cartas"></button>
+                    <button name="carta 1" aria-label="carta 1" id="1" class="cartas"></button>
+                    <button name="carta 2" aria-label="carta 2" id="2" class="cartas"></button>
+                    <button name="carta 3" aria-label="carta 3" id="3" class="cartas"></button>
 
-                <tr>
-                    <td><button name="carta 4" aria-label="carta 4" id="4" class="cartas"></button></td>
-                    <td><button name="carta 5" aria-label="carta 5" id="5" class="cartas"></button></td>
-                    <td><button name="carta 6" aria-label="carta 6" id="6" class="cartas"></button></td>
-                    <td><button name="carta 7" aria-label="carta 7" id="7" class="cartas"></button></td>
-                </tr>
 
-                <tr>
-                    <td><button name="carta 8" aria-label="carta 8" id="8" class="cartas"></button></td>
-                    <td><button name="carta 9" aria-label="carta 9" id="9" class="cartas"></button></td>
-                    <td><button name="carta 10" aria-label="carta 10" id="10" class="cartas"></button></td>
-                    <td><button name="carta 11" aria-label="carta 11" id="11" class="cartas"></button></td>
-                </tr>
+                
+                    <button name="carta 4" aria-label="carta 4" id="4" class="cartas"></button>
+                    <button name="carta 5" aria-label="carta 5" id="5" class="cartas"></button>
+                    <button name="carta 6" aria-label="carta 6" id="6" class="cartas"></button>
+                    <button name="carta 7" aria-label="carta 7" id="7" class="cartas"></button>
 
-                <tr>
-                    <td><button name="carta 12" aria-label="carta 12" id="12" class="cartas"></button></td>
-                    <td><button name="carta 13" aria-label="carta 13" id="13" class="cartas"></button></td>
-                    <td><button name="carta 14" aria-label="carta 14" id="14" class="cartas"></button></td>
-                    <td><button name="carta 15" aria-label="carta 15" id="15" class="cartas"></button></td>
-                </tr>
-            </table>
+
+                
+                    <button name="carta 8" aria-label="carta 8" id="8" class="cartas"></button>
+                    <button name="carta 9" aria-label="carta 9" id="9" class="cartas"></button>
+                    <button name="carta 10" aria-label="carta 10" id="10" class="cartas"></button>
+                    <button name="carta 11" aria-label="carta 11" id="11" class="cartas"></button>
+
+
+                
+                    <button name="carta 12" aria-label="carta 12" id="12" class="cartas"></button>
+                    <button name="carta 13" aria-label="carta 13" id="13" class="cartas"></button>
+                    <button name="carta 14" aria-label="carta 14" id="14" class="cartas"></button>
+                    <button name="carta 15" aria-label="carta 15" id="15" class="cartas"></button>
+
+            </div>
         </section>
         <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden h-max md:block md:relative z-50 md:max-w-max md:overflow-x-hidden md:overflow-y-auto absolute flex justify-center items-center h-full w-full">
             <div class="relative w-full max-w-2xl max-h-full max-w-max">
@@ -105,6 +105,7 @@
                             <div id="movimientos" class="estadisticas">Movimientos: 0</div>
                             <div id="tiempo" class="estadisticas">Tiempo: 30 segundos</div>
                             <button aria-label="Empezar juego" class="empezar max-w-max hidden md:block" id="empezar">Empezar</button>
+                            <button class="empezar max-w-max hidden" id="start_again">Intentar de nuevo</button>
                         </aside>
                 </div>
             </div>
@@ -117,12 +118,8 @@
   
   <!-- Main modal -->
 
-    <button  data-modal-target="default-modal" data-modal-toggle="default-modal" class="hidden block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-        Toggle modal
-      </button>
-      <button  onclick="showModal('default-modal')" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-        Toggle modal
-      </button>
+   
+
     <a href="#" id="logOut" class="">Log Out</a>
     <script type="module" src="js/star.js"></script>
     <script type="module" src="./main.js"></script>
@@ -134,6 +131,11 @@
         const modal = document.getElementById('default-modal');
         let modalBackdrops = document.querySelectorAll('div[modal-backdrop]');
         let body = document.body;
+        const empezar = document.getElementById('start_again');
+
+        empezar.addEventListener('click', function() {
+            location.reload();
+        })
 
         function showModal(id_modal) {
             console.log('Llegué al click');
@@ -153,6 +155,8 @@
             backdrop.classList.add('bg-gray-900', 'bg-opacity-50', 'dark:bg-opacity-80', 'fixed', 'inset-0', 'z-40');
             backdrop.setAttribute('modal-backdrop', '');
             body.appendChild(backdrop);
+
+
         }
 
         
