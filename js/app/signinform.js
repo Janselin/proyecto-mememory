@@ -15,11 +15,8 @@ if (signInForm){
         try {
             const credentials = await signInWithEmailAndPassword(auth, email, password);
             console.log('Credenciales:', credentials);
-
-            avatar_logo.style="display: block";
-
-
-            
+            hideAvatars() 
+            avatar_logo.style="display: block";            
             window.location.href = "/proyecto-mememory/juego.html";
         } catch (error) {
             if (error.code === "auth/wrong-password") {
@@ -28,10 +25,8 @@ if (signInForm){
                 
             }else if(error){
                 alert(error)  
-                avatar_happy.style="display: none";
+                hideAvatars() 
                 avatar_error.style="display: block"
-                avatar_user.style="display: none";
-                avatar_logo.style="display: none";
 
             }
         }
