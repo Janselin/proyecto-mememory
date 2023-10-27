@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/question.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/juego.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="icon" type="image/png" sizes="196x196" href="public/icons/favicon-196.png">
     <link rel="apple-touch-icon" href="public/icons/apple-icon-180.png">
@@ -49,10 +52,11 @@
     <title>Juego de Me-Memoria</title>
 </head>
 
-<body>
-    <main>
-        <section class="section1">
-            <h1>Juego de Me-Memoria</h1>
+<body class="preflight-off p-2">
+    <h1 class="block sm:hidden">Juego de Me-Memoria</h1>
+    <main class="w-11/12 m-auto flex-col sm:flex-row gap-4 sm:gap-0">
+        <section class="game_field all-initial order-2 sm:order-1">
+            <h1 class="hidden sm:block">Juego de Me-Memoria</h1>
             <table>
                 <tr>
                     <td><button name="carta 0" aria-label="carta 0" id="0" class="cartas"></button></td>
@@ -83,20 +87,25 @@
                 </tr>
             </table>
         </section>
-        <section class="section2">
-            <div id="aciertos" class="estadisticas">Aciertos: 0</div>
-            <div id="tiempo" class="estadisticas">Tiempo: 30 segundos</div>
-            <div id="movimientos" class="estadisticas">Movimientos: 0</div>
 
-            <button aria-label="Empezar juego" class="empezar" id="empezar">Empezar</button>
-        </section>
+        <aside class="w-full flex-wrap sm:max-w-max score_board flex sm:gap-16 sm:flex-col justify-center items-center order-1 sm:order-2 bg-transparent sm:bg-[#ffffff33] sm:pt-16">
+            <div class="flex sm:flex-col sm:flex-nowrap items-center gap-4 mb-4 justify-center text-center">
+                <div id="aciertos" class="estadisticas">Aciertos: 0</div>
+                <div id="tiempo" class="estadisticas">Tiempo: 30 segundos</div>
+                <div id="movimientos" class="estadisticas">Movimientos: 0</div>
+            </div>
+
+            <button aria-label="Empezar juego" class="empezar max-w-max" id="empezar">Empezar</button>
+        </aside>
+
+
+  
     </main>
-    
     <a href="#" id="logOut" class="">Log Out</a>
+
     <script type="module" src="js/star.js"></script>
     <script type="module" src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </body>
 
 </html>

@@ -1,18 +1,21 @@
+
 body {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.7372198879551821) 0%, rgba(0, 212, 255, 1) 100%);
     font-family: sans-serif;
     color: #fff;
+    height: max-content;
+    padding-top: 4rem;
 }
 
 main {
-    width: 730px;
-    margin: 100px auto 50px;
     display: flex;
     align-items: center;
+    height: 100%;
+    justify-content: center;
 }
 
-.section1 {
+.game_field {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
@@ -20,6 +23,25 @@ main {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+}
+
+.game_field table tr td button{
+    border: 0.5px solid #cbbebe;
+    border-spacing: 2px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game_field table tr td button:disabled{
+    background-color: transparent;
+}
+
+.game_field table tr td button img{
+    object-fit: contain;
+    width: auto;
+    height: 4rem;
 }
 
 h1 {
@@ -72,7 +94,7 @@ button:hover {
 }
 
 
-.section2 {
+.score_board {
     background-color: rgba(255, 255, 255, 0.2);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -83,10 +105,9 @@ button:hover {
 
 .estadisticas {
     border: 1px solid #fff;
-    height: 105px;
+    height: max-content;
     border-radius: 8px;
     padding: 8px 20px;
-    margin: 20px;
     box-sizing: border-box;
 }
 
