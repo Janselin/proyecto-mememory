@@ -12,6 +12,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "firebase": "^9.10.0"
+    "firebase": "^9.10.0",
+    "flowbite": "^2.0.0"
   }
 }

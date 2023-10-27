@@ -16,13 +16,13 @@ if (signInForm){
             const credentials = await signInWithEmailAndPassword(auth, email, password);
             console.log('Credenciales:', credentials);
             hideAvatars() 
-            avatar_logo.style="display: block";            
+            avatar_logo.style="display: block";
             window.location.href = "/proyecto-mememory/juego.html";
         } catch (error) {
             if (error.code === "auth/wrong-password") {
                 alert('El error es:', error.message)
-                                
-                
+
+
             }else if(error){
                 alert(error)  
                 hideAvatars() 
