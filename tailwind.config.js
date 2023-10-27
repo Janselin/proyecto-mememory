@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [  ],
+  content: [],
   theme: {
     extend: {},
   },
@@ -12,3 +12,4 @@ export default {
     preflight: true,
   },
 }
+

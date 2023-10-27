@@ -4,14 +4,17 @@ body {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.7372198879551821) 0%, rgba(0, 212, 255, 1) 100%);
     font-family: sans-serif;
     color: #fff;
-    height: max-content;
-    padding-top: 4rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: calc(100% -100px);
     justify-content: center;
 }
 
@@ -57,7 +60,7 @@ button:hover {
     cursor: pointer;
 }
 
-.empezar {
+.empezar, .empezar-mobile {
     
     height: 50px;
     width: 250px;    
@@ -79,7 +82,7 @@ button:hover {
 
     }
 
-.empezar:hover {
+.empezar:hover, .empezar-mobile:hover {
         -webkit-transform: translateY(3px);
             -ms-transform: translateY(3px);
                 transform: translateY(3px);
@@ -89,7 +92,7 @@ button:hover {
 
 
 
-.empezar:active {
+.empezar:active, .empezar-mobile:active{
         opacity: 0.5;
 }
 
@@ -105,10 +108,8 @@ button:hover {
 
 .estadisticas {
     border: 1px solid #fff;
-    height: 105px;
     border-radius: 8px;
     padding: 8px 20px;
-    margin: 20px;
     box-sizing: border-box;
 }
 
@@ -121,4 +122,10 @@ img {
     opacity: 50%;
 }
 
+.modal-active{
+    background-color: white;
+}
 
+.modal-active #tiempo{
+    display: none;
+}

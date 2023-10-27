@@ -18,10 +18,12 @@ let pierdeAudio = new Audio('./sonido/pierde.wav');
 // Documentos HTML
 const cartas = document.querySelectorAll('.cartas');
 const empezar = document.querySelector('.empezar');
+const empezarMobile = document.querySelector('.empezar-mobile');
 const buttons = document.querySelectorAll("button");
 let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
 let mostrarTiempo = document.getElementById('tiempo');
+let mostrarTiempoMobile = document.getElementById('tiempo-mobile');
 
 // Eventos
 
@@ -29,6 +31,48 @@ let mostrarTiempo = document.getElementById('tiempo');
 let numeros = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numeros = numeros.sort(() => Math.random() - 0.5);
 
+alert('Test!')
+
+const modal = document.getElementById('default-modal');
+let modalBackdrops = document.querySelectorAll('div[modal-backdrop]');
+let body = document.body;
+
+function showModal(id_modal) {
+    console.log('Llegué al click');
+
+    // Eliminar los elementos con atributo modal-backdrop
+    modalBackdrops.forEach(function (element) {
+        element.remove();
+    });
+    // Agregar clases al elemento modal
+    modal.classList.remove('hidden');
+    modal.classList.add('modal-active', 'flex');
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
+
+    // Crear y agregar el elemento modal-backdrop
+    const backdrop = document.createElement('div');
+    backdrop.classList.add('bg-gray-900', 'bg-opacity-50', 'dark:bg-opacity-80', 'fixed', 'inset-0', 'z-40');
+    backdrop.setAttribute('modal-backdrop', '');
+    body.appendChild(backdrop);
+}
+
+
+function closeModal(id_modal){
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    // Eliminar los elementos con el atributo modal-backdrop con un efecto de desvanecimiento
+    document.querySelectorAll('div[modal-backdrop]').forEach(function(element) {
+        element.style.transition = 'opacity 0.5s';
+        element.style.opacity = '0';
+
+        // Una vez completada la animación de desvanecimiento, eliminar el elemento
+        element.addEventListener('transitionend', function() {
+            element.remove();
+        });
+    });
+    location.reload();
+}
 
 //Funciones
 
@@ -37,7 +81,6 @@ function iniciarJuego() {
     for (let i = 0; i < cartas.length; i++) {
         cartas[i].disabled = true;
     }
-    empezar.style.display = "block";
 }
 
 //desbloquear cartas
@@ -54,6 +97,7 @@ function contarTiempo() {
     tiempoRegresivoId = setInterval(() => {
         timer--;
         mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`;
+        mostrarTiempoMobile.innerHTML = `Tiempo: ${timer} segundos`;
         if (timer == 0) {
             clearInterval(tiempoRegresivoId);
             perdiste();
@@ -104,6 +148,7 @@ function destapar(id) {
                 clearInterval(tiempoRegresivoId);
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 😲`;
                 mostrarTiempo.innerHTML = `Eres excelente 🎊 solo demoraste ${timerInicial - timer} segundos`;
+                mostrarTiempoMobile.innerHTML = `Eres excelente 🎊 solo demoraste ${timerInicial - timer} segundos`;
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 😎🤘`;
                 ganarAudio.play();
                 ganaste();
@@ -139,7 +184,10 @@ function ganaste() {
 
 //Mensaje cuando pierdes
 function perdiste() {
-    Swal.fire({
+    showModal('default-modal')
+    alert('Bienvenida la función');
+    /* location.reload(); */
+/*     Swal.fire({
         icon: 'error',
         title: 'Que mal 😕',
         text: 'Se te acabó el tiempo ⏰. Intentalo de nuevo✌️',
@@ -147,7 +195,7 @@ function perdiste() {
         if (resultado.isConfirmed) {
             location.reload();
         }
-    });
+    }); */
 }
 
 export {
@@ -156,5 +204,6 @@ export {
     buttons,
     destapar,
     empezar,
+    empezarMobile,
     cartas
 };
