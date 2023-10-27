@@ -181,14 +181,6 @@ body {
 
 /* ---------------------background end-------------------------------------------- */
 
-
-.contenedor {
-  position: relative;  
-  max-width: 1200px;
-  width: 95%;
-
-}
-
 .formulario {
   display: flex;
   gap: 3rem;
@@ -268,7 +260,6 @@ body {
 
 .input-login input[type="submit"] {
   font-family: var(--texts);
-  width: 100%;
   padding: 10px 16px;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -287,13 +278,8 @@ body {
   color: var(--texts);
   cursor: pointer;
   }
-}
 
 
-.social__contenedor {
-  
-  display: flex;
-  justify-content: center;
 }
 
 .registrar p a {
@@ -351,18 +337,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .contenedor {
-    width: 80%;
-  }
-
   .encabezado{
     font-size: 3rem;
   }
-}
-
-@media (min-width: 1024px) {
-  .contenedor {
-    width: 35%;
-  }
- 
 }
