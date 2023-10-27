@@ -13,63 +13,68 @@ const inputMail = document.querySelector("#usuario");
 const inputPass = document.querySelector("#contraseña");
 
 
-
-inputMail.addEventListener('keyup', (e) => {
-
-   change_img(avatar_logo,avatar_user);
-   avatar_pass.style="display: none";
-   avatar_error.style="display: none";
-   avatar_happy.style="display: none";
-   
-   
-});
-
-
-inputPass.addEventListener('keyup', (e) => {
-
-   change_img(avatar_logo,avatar_pass);
-   avatar_user.style="display: none";
-   avatar_error.style="display: none";
-   avatar_happy.style="display: none";   
-
-   
-});
-
-inputPass.addEventListener('focusout', (e) => {
-
-   change_img(avatar_pass,avatar_happy);
-   avatar_error.style="display: none";
-   avatar_user.style="display: none";
-   avatar_logo.style="display: none";
-   
-});
-
+// funcion donde oculta una img y activa otra.
 function change_img(avatar,img) {
 
-      avatar.style="display: none";     
-      img.style="display:block";
+   avatar.style="display: none";     
+   img.style="display:block";
 
-   }
+};
 
+// funcion donde oculta todos los avatares.
+function hideAvatars() {
 
-// hover de password
-botton_forgot.addEventListener("mouseover", (e) => { 
-
+   avatar_forgot.style="display: none";
+   avatar_error.style="display: none";
    avatar_logo.style="display: none";
    avatar_user.style="display: none";
    avatar_pass.style="display: none";   
    avatar_happy.style="display: none";   
-   avatar_error.style="display: none";
-   avatar_forgot.style="display:block";
+   
+};
 
+// valida si se esta escribiendo
+inputMail.addEventListener('keyup', (e) => {
 
+   
+   hideAvatars()
+   change_img(avatar_logo,avatar_user);
+   
+});
+
+// valida si se esta escribiendo
+inputPass.addEventListener('keyup', (e) => {
+
+   
+   hideAvatars()
+   change_img(avatar_logo,avatar_pass);
+   
 });
 
 
+// valida si se sale del foco del input password
+inputPass.addEventListener('focusout', (e) => {
+
+   
+   hideAvatars()
+   change_img(avatar_pass,avatar_happy);
+   
+});
+
+
+
+// hover de password
+botton_forgot.addEventListener("mouseover", (e) => { 
+   hideAvatars()
+   avatar_forgot.style="display:block";
+
+});
+
+// hover desactivado de password
 botton_forgot.addEventListener("mouseout", (e) => {  
+   hideAvatars() 
    avatar_logo.style="display:block";
-   avatar_forgot.style="display: none";
-   avatar_error.style="display: none";
+  
 
 });
 
