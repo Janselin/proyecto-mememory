@@ -302,12 +302,16 @@ body {
 }
 
 .iniciar-sesion-form {
-  transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -moz-transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -ms-transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -o-transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 88%;
+  max-width: 600px;
 }
+
+
 
 .avatar__container {
   display: flex;
