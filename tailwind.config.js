@@ -2,12 +2,13 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        mq: '860px',
+      },
+    },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
-
+  plugins: [],
   corePlugins: {
     preflight: true,
   },

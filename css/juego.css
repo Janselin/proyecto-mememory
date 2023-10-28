@@ -15,8 +15,21 @@ body {
 main {
     display: flex;
     align-items: center;
-    height: calc(100% -100px);
+    height: calc(100% - 100px);
     justify-content: center;
+}
+
+#logOut{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#logOut svg{
+    object-fit: contain;
+    width: auto;
+    height: 1rem;
+    fill: #fff;
 }
 
 .game_field {
@@ -26,6 +39,8 @@ main {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .game_field table tr td button{
@@ -37,15 +52,15 @@ main {
     align-items: center;
 }
 
-.game_field{
-
+.game_field > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) /* Esto crea 4 columnas de tamaño igual */
 }
 
-.game_field > div{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
 .game_field button{
+    color: white;
+    text-align: center;
     border: 1px solid #efefef;
     background-color: white;
     justify-content: center;
@@ -60,7 +75,21 @@ main {
 .game_field button img{
     object-fit: contain;
     width: auto;
-    height: 4rem;
+    max-height: 5.8rem;
+}
+
+@media screen and (max-width:448px) {
+    .game_field button img{
+        width: 100%;
+        max-height: 5rem;
+    }
+
+    .game_field button{
+        width: 100%;
+        min-width: 4rem;
+        height: 4rem;
+    }
+
 }
 
 h1 {

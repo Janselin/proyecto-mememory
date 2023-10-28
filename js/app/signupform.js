@@ -5,8 +5,6 @@ import { showMessage } from "./showmessage.js";
 
 const signUpForm = document.querySelector('#sign_up_form');
 
-showMessage('Test', 'success');
-
 if (signUpForm){
 
     signUpForm.addEventListener('submit', async (e) => {
