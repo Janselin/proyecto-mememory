@@ -57,6 +57,7 @@ main {
     align-items: center;
     display: flex;
     overflow: hidden;
+    background-color: #afafaf52;
 }
 
 .game_field button:disabled{
@@ -67,20 +68,6 @@ main {
     object-fit: contain;
     width: auto;
     max-height: 5.8rem;
-}
-
-@media screen and (max-width:448px) {
-    .game_field button img{
-        width: 100%;
-        max-height: 5rem;
-    }
-
-    .game_field button{
-        width: 100%;
-        min-width: 4rem;
-        height: 4rem;
-    }
-
 }
 
 h1 {
@@ -171,4 +158,19 @@ img {
 .modal-active #start_again{
     display: block;
     font-size: 1rem;
+}
+
+
+@media screen and (max-width:448px) {
+    .game_field button img{
+        width: 100%;
+        max-height: 4rem;
+    }
+
+    .game_field button{
+        width: 100%;
+        min-width: 4rem;
+        height: 4rem;
+    }
+
 }
