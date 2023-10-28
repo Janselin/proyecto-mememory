@@ -31,8 +31,6 @@ let mostrarTiempoMobile = document.getElementById('tiempo-mobile');
 let numeros = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numeros = numeros.sort(() => Math.random() - 0.5);
 
-alert('Test!')
-
 //Funciones
 
 //Iniciar Jugo deshabilitando(bloquear) las cartas
@@ -144,7 +142,6 @@ function ganaste() {
 //Mensaje cuando pierdes
 function perdiste() {
     showModal('default-modal')
-    alert('Bienvenida la función');
     /* location.reload(); */
 /*     Swal.fire({
         icon: 'error',
